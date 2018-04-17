@@ -5,7 +5,7 @@ const takeANumber = function(line, name) {
 
 /*
 const takeANumberVariant = function(line) {
-  let number = line[line.length+1] + 1;
+  let number = line.length + 1;
   currentCustomer.push(number);
   return `Welcome, you are number ${number}. You are number ${line.length} in line.`
 }
