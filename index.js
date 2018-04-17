@@ -2,12 +2,12 @@ const takeANumber = function(line, name) {
   line.push(name);
   return `Welcome, ${name}. You are number ${line.length} in line.`
 } 
-/*
-const takeANumberVariant = function(currentCustomer) {
-  let number = currentCustomer.length + 1;
+
+const takeANumberVariant = function(line) {
+  let number = line.length + 1;
   currentCustomer.push(number);
-  return `Welcome, you are number ${number}. You are ${
-}*/
+  return `Welcome, you are number ${number}. You are number ${line.length} in line.`
+}
 
 const nowServing = function(line) {
   if (line.length > 0) {
