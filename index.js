@@ -1,28 +1,34 @@
-const takeANumber = function(katzDeli, name) {
-  katzDeli.push(name);
-  return `Welcome, ${name}. You are number ${katzDeli.length} in line.`
+const takeANumber = function(line, name) {
+  line.push(name);
+  return `Welcome, ${name}. You are number ${line.length} in line.`
 } 
+/*
+const takeANumberVariant = function(currentCustomer) {
+  let number = currentCustomer.length + 1;
+  currentCustomer.push(number);
+  
+}*/
 
-const nowServing = function(deliLine) {
-  if (deliLine.length > 0) {
+const nowServing = function(line) {
+  if (line.length > 0) {
     //removes and returns the first name in the array
-    return `Currently serving ${deliLine.shift()}.`
+    return `Currently serving ${line.shift()}.`
   } else {
     return "There is nobody waiting to be served!";
   }
 }
 
-const currentLine = function(katzDeliLine) {
-  if (katzDeliLine.length > 0) {
+const currentLine = function(line) {
+  if (line.length > 0) {
     let results =["The line is currently:"];
-    for (let i = 0; i < katzDeliLine.length; i++) {
+    for (let i = 0; i < line.length; i++) {
       //push the number in line of the current person to the array
       results.push(`${i+1}.`);
       //check if it is the last person in line, and decide accordingly whether a comma is necessary after pushing the name to the array
-      if (i + 1 !== katzDeliLine.length) {
-        results.push(`${katzDeliLine[i]},`);
+      if (i + 1 !== line.length) {
+        results.push(`${line[i]},`);
       } else {
-        results.push(katzDeliLine[i]);
+        results.push(line[i]);
       }
     }
     //join the resulting array into a single string and return it
