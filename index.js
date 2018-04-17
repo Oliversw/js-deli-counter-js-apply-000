@@ -34,7 +34,6 @@ const currentLine = function(line) {
         results.push(line[i]);
       }
     }
-    //join the resulting array into a single string and return it
     return results.join(" ");
   } else {
     return "The line is currently empty.";
